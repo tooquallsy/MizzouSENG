@@ -23,7 +23,7 @@
             success: function(data) {
                 
                 var candidateBar = d3.select("#graph").selectAll("div").data(data.estimates),
-                    candidateWrapper = candidateBar.enter().append("div").classed("group2", true);
+                    candidateWrapper = candidateBar.enter().append("div").classed("group", true);
                 
                 candidateWrapper.append("div")
                     .classed("choice", true)
@@ -41,11 +41,8 @@
                 
             }
         });
-    </script>
-    
-    <script>
         
-        var url = "http://elections.huffingtonpost.com/pollster/api/charts/2016-national-democratic-primary";
+                var url = "http://elections.huffingtonpost.com/pollster/api/charts/2016-national-democratic-primary";
         
         $.ajax(url, {
             dataType: "jsonp",
@@ -54,7 +51,7 @@
             success: function(data) {
                 
                 var candidateBar = d3.select("#graph2").selectAll("div").data(data.estimates),
-                    candidateWrapper = candidateBar.enter().append("div").classed("group", true);
+                    candidateWrapper = candidateBar.enter().append("div").classed("group2", true);
                 
                 candidateWrapper.append("div")
                     .classed("choice", true)
