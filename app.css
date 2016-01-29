@@ -16,6 +16,22 @@ body {
     margin: 5px;
     float: left;
 }
+
+#graph2 .choice {
+    float: left;
+    font-family: arial;
+    font-size: 1.5em;
+    min-width: 200px;
+    text-align: right;
+    margin: 8px 5px;
+}
+#graph2 .bar {
+    width: 0;
+    height: 35px;
+    background-color: coral;
+    margin: 5px;
+    float: left;
+}
 .group:after {
   content: "";
   display: table;
