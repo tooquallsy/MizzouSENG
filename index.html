@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +10,7 @@
 <body>
     
     <div id="graph"></div>
+    <div id="graph2"></div>
     
     <script>
         
@@ -43,24 +45,24 @@
     
     <script>
         
-        var url2 = "http://elections.huffingtonpost.com/pollster/api/charts/2016-senate-dem-primary";
+        var url = "http://elections.huffingtonpost.com/pollster/api/charts/2016-national-gop-primary";
         
-        $.ajax(url2, {
+        $.ajax(url, {
             dataType: "jsonp",
             jsonpCallback: "pollsterCallback",
             cache: true,
             success: function(data) {
                 
-                var candidateBar2 = d3.select("#graph").selectAll("div").data(data.estimates),
-                    candidateWrapper2 = candidateBar2.enter().append("div").classed("group", true);
+                var candidateBar = d3.select("#graph").selectAll("div").data(data.estimates),
+                    candidateWrapper = candidateBar.enter().append("div").classed("group", true);
                 
-                candidateWrapper2.append("div")
+                candidateWrapper.append("div")
                     .classed("choice", true)
                     .text(function(candidate) {
                         return candidate.choice + " " + candidate.value + "%";
                     });
                 
-                candidateWrapper2.append("div")
+                candidateWrapper.append("div")
                     .classed("bar", true)
                     .transition()
                     .duration(1000)
@@ -72,4 +74,4 @@
         });
     </script>
 </body>
-</html>
+</html
