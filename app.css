@@ -37,3 +37,9 @@ body {
   display: table;
   clear: both;
 }
+
+.group2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
